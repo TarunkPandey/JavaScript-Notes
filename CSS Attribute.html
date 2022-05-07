@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute & nth child pseudo Selectors</title> 
+    <style>
+        input{
+            display: block;
+        }
+        .container{
+            display: block;
+            width: 250px;
+            margin: auto;
+        }
+        input[type='text']{
+            padding: 20px;
+            border: 2px solid red;
+        }
+        a[target]{
+            font-size: 40px;
+            color: purple;
+        }
+        a[target='_self']{
+            font-size: 25px;
+            color: green;
+        } 
+        input[type=password]{
+            color: cyan;
+            border-color: rgb(3, 65, 253);
+        }
+        /* This will apply CSS for 3rd child */
+        /* li:nth-child(3){
+            color: cyan;
+        } */
+        /*Every 2nd child gets red color */
+        /* li:nth-child(2n+0){
+            color: red;
+        } */
+        /* 3,6,9,12.... will get red as (n=1,2,3,4,5....) */
+        li:nth-child(3n+3){
+            color: red;
+        }
+        /* Odd Child */
+        li:nth-child(odd){
+            background-color: yellow;
+        }
+        /* Even Child */
+        li:nth-child(even){
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><a href="http://google.com" target="_blank">Go to Google</a></h1>
+        <h1><a href="http://faceboook.com" target="_self">Go to Facebook</a></h1>
+        <form action="" class="form-control">
+            <input type="text" placeholder="Enter your name">
+            <input type="password" placeholder="Enter yourpassword">
+            <input type="submit" value="Submit">
+        </form>
+        <ul>
+            <li class="item" id="item-1">Item-1</li>
+            <li class="item" id="item-2">Item-2</li>
+            <li class="item" id="item-3">Item-3</li>
+            <li class="item" id="item-4">Item-4</li>
+            <li class="item" id="item-5">Item-5</li>
+            <li class="item" id="item-6">Item-6</li>
+            <li class="item" id="item-7">Item-7</li>
+            <li class="item" id="item-8">Item-8</li>
+            <li class="item" id="item-9">Item-9</li>
+            <li class="item" id="item-10">Item-10</li>
+            <li class="item" id="item-11">Item-11</li>
+            <li class="item" id="item-12">Item-12</li>
+            <li class="item" id="item-13">Item-13</li>
+            <li class="item" id="item-14">Item-14</li>
+            <li class="item" id="item-15">Item-15</li>
+        </ul>
+    </div>
+</body>
+</html>

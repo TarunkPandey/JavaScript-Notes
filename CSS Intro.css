@@ -1,0 +1,5 @@
+p{
+    color: darkgreen;
+    background-color: blueviolet !important;
+    /* !imporatant keyword makes that particular sytling take priority, hence can't be changed by upcoming styling */
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alignment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap" rel="stylesheet">
+    <style>
+      *{
+        box-sizing: border-box;
+      } 
+      h3{
+        font-family: 'Roboto Slab', serif;
+      }
+      body{
+        font-family: 'Oswald', sans-serif;
+      } 
+      .container{
+        width: 900px;
+        border: 3px solid red;
+        margin: auto; /*Calculates margin with equal distance from left and right*/
+        margin: 30px auto;
+        background-color: rgb(233, 231, 211);
+      }
+      .item{
+          border: 3px solid gray;
+          margin: 12px 10px;
+          padding: 12px 10px;
+          background-color: rgb(221, 208, 233);
+      }
+      #fruits{
+        float: left;
+        width: 47%;
+      }
+      #computer{
+        float: right;
+        width: 47%;
+      }
+      #stationary{
+        /* float: left; */
+        /* clear statement helps avoid overlap of fruits and computer with stationary */
+        clear: left;
+        clear: right;
+        /* Above two clear statement can be replaced by */
+        /* clear: both; */
+      }
+      p{
+        text-align: center;
+        text-align: left;
+        text-align: justify; /*Best text align for pparagraphs*/ 
+      }
+      h1{
+          width: 282px;
+          margin: auto;
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to my Store</h1>
+        <div id="fruits" class="item">
+            <h3 style="text-align: center;">Fruits</h3>
+            <p id="fruitspara" class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus, iusto nesciunt dolores modi dolorum ratione! Voluptatum sunt rem possimus laborum autem neque laudantium veritatis, rerum aliquam, praesentium odit error eos culpa suscipit natus. Perspiciatis magni nisi exercitationem vero quidem! Veritatis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Non hic eligendi possimus reprehenderit doloremque iusto animi quod recusandae, dolorum vero aut eaque, provident odio vel dignissimos nulla perferendis a maiores?</p>
+        </div>
+        <div id= "computer" class="item">
+            <h3 style="text-align: center;">Computer</h3>
+            <p id="computerpara" class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus, iusto nesciunt dolores modi dolorum ratione! Voluptatum sunt rem possimus laborum autem neque laudantium veritatis, rerum aliquam, praesentium odit error eos culpa suscipit natus. Perspiciatis magni nisi exercitationem vero quidem! Veritatis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate harum cum quisquam consequuntur error totam debitis sit, perspiciatis quo! Dolor doloremque molestiae adipisci debitis! Consectetur dolorum debitis quam eligendi soluta?</p>
+        </div>
+        <div id="stationary" class="item">
+            <h3 style="text-align: center;">Stationary</h3>
+            <p id="stationary" class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus, iusto nesciunt dolores modi dolorum ratione! Voluptatum sunt rem possimus laborum autem neque laudantium veritatis, rerum aliquam, praesentium odit error eos culpa suscipit natus. Perspiciatis magni nisi exercitationem vero quidem! Veritatis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium natus maiores modi. Fugit, nesciunt! Ratione minima, blanditiis eum rerum nemo debitis repellat eaque, iste optio qui cum, mollitia dolorum fuga!
+            </p>
+        </div>
+        <div id="glasses" class="item">
+            <h3 style="text-align: center;">Glasses</h3>
+            <p id="glassespara" class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus, iusto nesciunt dolores modi dolorum ratione! Voluptatum sunt rem possimus laborum autem neque laudantium veritatis, rerum aliquam, praesentium odit error eos culpa suscipit natus. Perspiciatis magni nisi exercitationem vero quidem! Veritatis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium natus maiores modi. Fugit, nesciunt! Ratione minima, blanditiis eum rerum nemo debitis repellat eaque, iste optio qui cum, mollitia dolorum fuga!
+            </p>
+        </div>
+    </div>
+</body>
+</html>

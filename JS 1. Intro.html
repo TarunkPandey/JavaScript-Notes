@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro to JavaScript</title>
+    <script>
+        //This doesn't make changes in webpage as it is processed before the body section is implemented.
+        //To see changes add this script portion below in body section.
+        document.getElementById('p1').innerHTML = '<b> We are learning Javascript</b>'
+    </script>
+</head>
+
+<body>
+    <h1>JavaScript</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, unde?</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, quisquam.</p>
+    <p id='p1' style="background-color: lightcyan;" >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto pariatur aliquam similique saepe earum
+        ullam!
+    </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, ipsam.</p>
+    <img id="developer-image" src="https://cdn.pixabay.com/photo/2021/08/04/13/06/software-developer-6521720__480.jpg"
+        style="height: 250px width ; width: 500px">
+        <a href="https://www.youtube.com/" id="link">Go to YouTube</a>
+        <table id = 'table'>
+            <tr>
+                <th>Name</th>
+                <th>Batch</th>
+                
+            </tr>
+            <tr>
+                <th>Aditi</th>
+                <th id="batch">11</th>
+
+            </tr>
+            <tr>
+                <th>Abhishek</th>
+                <th>12</th>
+
+            </tr>
+        </table>
+    <script>
+        //1. Change the HTML content(text + tag)
+        // document.getElementById('p1').innerHTML = '<b> We are learning Javascript</b>'
+
+        // 2.Change the Text
+        // document.getElementById('p1').innerText = 'We are learning Javascript'
+
+        // 3.Change tyhe attribute values of HTML tag
+        // document.getElementById('developer-image').src = 'https://res.cloudinary.com/practicaldev/image/fetch/s--_HBZhuhF--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/nweeqf97l2md3tlqkjyt.jpg'
+        // document.getElementById('developer-image').height = '150'
+        // document.getElementById('developer-image').width = '300'
+        // document.getElementById('link').href = 'https://www.amazon.com/'
+        // document.getElementById('link').innerText = 'Go to Amazon'
+
+        // 4.Change the style of HTML style
+        // document.getElementById('developer-image').style.height = '125px'
+        // document.getElementById('developer-image').style.width = '250px'
+
+                //Changing both height and width simultaneouly
+        // document.getElementById('developer-image').style.cssText = 'height: 125px width ; width: 250px'
+
+        // document.getElementById('p1').style.backgroundColor = 'lightgreen'
+        // document.getElementById('batch').innerText = '9'
+        
+        
+    </script>
+</body>
+
+</html>

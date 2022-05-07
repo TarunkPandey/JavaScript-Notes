@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays in JS</title>
+  </head>
+  <body>
+    <script>
+      // Arrays: Collection of elements regardless of datatypes
+      // let arr = [1, 2, 'Tarun', 4, false]
+
+      // Property
+      // length - Length of the Array
+      // console.log(arr.length)
+
+      // Access element present at a given index
+      // console.log(arr[2]) // o/p: Tarun
+      // console.log(arr[arr.length-1]) //o/p: false
+
+      //Loops in array
+
+      // 1. Loop
+      // for(let i=0; i<arr.length; i++){
+      //         console.log(i,arr[i])
+      // }
+
+      // 2. for-of Loop : To iterate through array elements. Doesn't change the original array.
+      // let arr = ['tarun', 13, 12, 4, 18, 6]
+      // for(element of arr){
+      //     console.log(element)
+      // }
+
+      // 3. for-in
+
+      //Arrays use 2 methods of stack
+
+      //Array Methods
+
+      // 1. push(): Pushes new element to the end of the array and causes change to the original array and returns the updated length of the array.
+      // arr.push(10)
+      // console.log(arr)
+
+      // let x = arr.push(17)
+      // console.log(x) // returns updated length of the array
+
+      //2. pop(): Removes element form the end of the array, causes change to the original array.
+      // arr.pop()
+      // console.log(arr)
+      // let x =  arr.pop()
+      // console.log(x) //returns the poped out elements
+
+      // 3. shift(): Removes element from the start of the array and cause change in the original array and
+      // arr.shift()
+      // console.log(arr)
+
+      // let x = arr.shift()
+      // console.log(x) // returns the removed element
+
+      // 4. unshift(): Adds element at the start of the array. It also changes the original array.
+      // let x = arr.unshift(12)
+      // console.log(x) // returns the updated array length
+
+      // 5. concat(): This will not cause any change to the original array. Will concat the array passed as a parameter.
+      // let arr2= [81,'Akash', 'Naveen']
+      // console.log(arr.concat(arr2))
+
+      // To change the original array permanently
+      // arr = arr.concat(arr2)
+      // console.log(arr)
+
+      // 6. slice(): same as slice() in string
+      // let arr2 =  arr.slice(1,3)
+      // console.log(arr2)
+
+      // 7. delete keyword (Not Recommeneded: length of array remains unchanged i.e., deleted item takes space  and 'empty' keyword appears in place of deleted element)
+      // delete arr[3]
+      // console.log(arr)
+
+      // 8. reverse()- Reverse the order of the elements. This will cause change in the original array.
+      // console.log(arr.reverse())
+      // console.log(arr)
+
+      // 9. Call-backs: When a function is sent as an arguement to another function.
+      /*
+    function def(){
+
+    }
+
+    def(function(){  //Here an anonymous function is sent as an arguement to a function call of def.
+
+    })
+
+    def(() ==> {    //Here an arrow function is sent as an arguement to a function call of def.
+
+    })
+
+    Same concept is used with for-each(), filter() and map().
+
+    -forEach loop doesn't change the original array. It doesn't return anything.
+
+    forEach(function (element, index){ // forEach is a method of array which accepts a callback.
+        //code
+    })
+
+    forEach((element, index) =>{  // Arrow function can also be used forEach loop.
+
+    })
+    */
+      // arr.forEach(function(e,i){
+      //     console.log(i,e)
+      // })
+
+      // arr.forEach(function(e,i){
+      //     console.log(e+10,i+1) //Here adding 10 to the string elements concats 10 but adding 10 to the numeric elements increaments its value by 10 which is same for index.
+      // })
+
+      // arr.forEach(function(e,i){// Here position of element and index is fixed.
+      //     console.log(e+i,e+4)  // Here we can do anything with element and index.
+      // })
+
+      // arr.forEach(function(e,i){
+      //     if(e == 'tarun'){
+      //         console.log(i)
+      //     }
+      // })
+      //or
+      // arr.forEach((e,i) => {
+      //     if(e == 'tarun'){
+      //         console.log(i)
+      //     }
+      // })
+      /*
+    forEach can also be used as follows:
+    let fun1 = function (elemenet, index){ //anonymous function separatly defined
+        console.log(index,element)
+    }
+    arr.forEach(fun1) 
+    */
+
+      // 10. filter() : Loop through each element of the array and return the array of elements which match the specified condition.
+      /*
+    - Loop through each element of the array
+    - Return a condition check
+    - Returns an array of only those elements which match the specified condition 
+    - No change in original array
+    syntax:
+
+    arr.filter(function(element,index){
+        return (condition)
+    })
+
+    or
+
+    let newArr = arr.filter(function(element,index){
+        return (condition)
+    })
+
+    or
+
+    let newArr = arr.filter((element,index) => condition ) //using arrow function
+    */
+      //    let arr = [5, 10, 14, 20, 25]
+      //    let newArr =  arr.filter(function(e,i){
+      //        return e % 5 == 0 //returns elements divisible by 5.
+      //    })
+
+      //or
+
+      //    let newArr =  arr.filter((e,i) => e % 5 == 0 )
+      //    console.log(newArr)
+
+      // Q. Return those elements from arr array whose length = 6.
+
+      // let arr = ['Akash', 'Naveen', 'Rama', 'Rambali', 'Shweta']
+      // let newArr = arr.filter((e,i) => e.length === 6)
+      // console.log(newArr)
+
+      // Above statements can be written as :
+      // let newArr = arr.filter(e => e.length === 6) // Here index is removed as it is not used
+      // console.log(newArr)
+
+      // let arr = ['Vikash', 'Rajesh', 'Hardeep', 'Yashasvi']
+      // let newArr = arr.filter(function(elemenet,index){
+      //   return true
+      // })
+      // console.log(newArr) // o/p: ["Vikash", "Rajesh", "Hardeep", "Yashasvi"] // as it is returning true for all condition
+
+      // Note: To check if an array is empty or not, use its length. e.g:
+      // if(newArr.length){
+      //   console.log("non-Empty Array")
+      // }
+      // else{
+      //   console.log("Empty Array")
+      // }
+
+      // A empty or non-empty array with its length always gives trudy value.
+      // if(newArr){
+      //   console.log("non-Empty Array")
+      // }
+      // else{
+      //   console.log("Empty Array")
+      // }
+
+      // 11. every(): Returns true if all elements in that array satisfy the given condition
+      /*
+       - Returns a condition
+       - If all elements satisfy the specified condition, returns true else false
+      */
+
+      // e.g: Check if all elements are divisible by 10.
+
+      // let arr = [300, 100, 400, 222, 550]
+      // let flag = arr.every((element,index) => element % 10==0)
+      // console.log(flag)
+
+      // Above statements can be written as :
+      // let flag = arr.every(element => element % 10==0)
+      // console.log(flag)
+
+      // 12. some(): Returns true if any one element in that array satisfies the given condition
+      /*
+       - Returns a condition
+       - If any one element satisfies the specified condition, returns true else false
+      */
+
+      // Q. In this array check if any name has length == 7 and middle char should be 'd'.
+      // let arr = ['Vikash', 'Rajesh', 'Hardeep', 'Yashasvi', 'Rama']
+      // let flag = arr.some(element => element.length==7 && element.charAt(element.length/2) == 'd')
+      // console.log(flag)
+
+      // Q. In this array return any name that has length == 7 and middle char should be 'd'.
+      // let arr = ['Vikash', 'Rajesh', 'Hardeep', 'Yashasvi', 'Rama']
+      // let flag = arr.filter(element => element.length === 7 && element.charAt(element.length/2) === 'd')
+      // console.log(flag) 
+
+      // 13. map(): Returns the array of returned values as per the given code.
+      /*
+       - Loop through each element of the array
+       - Returns the element/ modified element. 
+       - Returns an array of returned values (Length of original and returned array will always be same.)
+       - No change in input array.
+
+       let newArr = arr.map(function(element, index){
+         //code
+         return [xyz]
+       })
+       e.g:
+      */
+      // let arr = ['Vikash', 'Rajesh', 'Hardeep', 'Yashasvi', 'Rama']
+      // let newArr = arr.map(function(elemenet, index){
+      //   if(elemenet != 'Rama')
+      //    return elemenet + '5'
+      // })
+      // console.log(newArr) //o/p: ['Vikash5', 'Rajesh5', 'Hardeep5', 'Yashasvi5', undefined]
+
+      /*
+      Q. You are given with an array of arrays, the nested arrays have 2 elements each, i.e, firstName and lastName.
+      You need to return an array of fullName.
+
+      let arr = [['Tarun','Kumar'], ['Naveen', 'Chebolu'], ['Amit', 'Singh'], ['Radha', 'Singh']]
+      Desired O/P: ['Tarun Kumar'], 'Naveen Chebolu', 'Amit Singh', 'Radha Singh']
+      */
+      
+      // let arr = [['Tarun','Kumar'], ['Naveen', 'Chebolu'], ['Amit', 'Singh'], ['Radha', 'Singh']]
+
+      // Using normal for-loop
+      // let newArr = []
+      // for(let i=0; i<arr.length; i++){
+      //   newArr[i] = arr[i][0]+ ' ' + arr[i][1]
+      // }
+      // console.log(newArr)
+
+      // Using map() //Here the lines of code has reduced significantly.
+      // let newArr = arr.map(e => e[0]+ ' ' + e[1])
+      // console.log(newArr)
+
+      //Lines of code can be further reduced by using join().
+      // let newArr = arr.map(e => e.join(' '))
+      // console.log(newArr)
+
+      // 14. reduce(): Calculate and return a single computed value from an array.
+      /*
+      - Loop through each element of the array.
+      - Returns the overall computed value after summing up the calculations made in each iteration.
+
+      let newArr = arr.reduce(function(accumulator or total, element){
+        //code
+
+      }, defaultValue)
+      */
+
+      // let arr = [1, 2, 3, 4, 5]
+      // let sum = arr.reduce(function(accumulator, element){
+      //   console.log(accumulator,element)
+      //    return accumulator + element
+      // },0)
+      // console.log(sum)
+
+      // Above function can also be written as :
+      // let sum = arr.reduce((accumulator, element) => accumulator + element)
+      // console.log(sum)
+
+      // let arr = [false, true, true, false]
+      // let sum = arr.reduce(function(accumulator, element){
+      //   console.log(accumulator,element)
+      //    return accumulator + element
+      // })
+      // console.log(sum)
+      </script>
+  </body>
+</html>
+<!-- 
+    - Look into splice(), find(), findIndex()
+    - Java is multi-threaded language. It becomes easier for multithreaded language to handle parellel executions.
+    - Java is single-threaded language.
+ -->

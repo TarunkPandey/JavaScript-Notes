@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise-4</title>
+    <script>
+        function calculate(){
+            var x = Number(prompt('Enter the Amount'))
+            var y = Number(prompt('Enter your Age'))
+            if(!x || !y){
+                alert('Please enter a valid amount or age')
+            }
+            else{
+             var discount
+            if(x >3500 && y >=18){
+                discount = 0.12
+            }
+            else if(x>3500 && y < 18){
+                discount = 0.1
+            }
+            else{
+                discount = 0
+            }
+            var bill = x - (x*discount)
+            alert('Your bill amount is ' + Number(bill))
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="calculate()">Calculate</button> 
+</body>
+</html>

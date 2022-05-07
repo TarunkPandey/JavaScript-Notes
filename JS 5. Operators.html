@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators</title>
+</head>
+<body>
+    <script>
+        // 1. Arthematic operators: +, -, *, /, %, ++, --, **
+        // post-increment(a++)
+        // pre-increment(++a)
+        // post-increment(a--)
+        // pre-increment(--a)
+
+        var a = 10
+        var b = 5
+        // console.log(a++) //10
+        // console.log(++a) //11
+        // console.log(a--) //10
+        // console.log(--a) //9
+
+        // console.log(a++ + ++a - ++a)//9
+        // console.log(5,'Ankit') // logging multiple values
+        // console.log(2 ** 3) // 2^3
+
+       //2. Relational Operators:  <, >, >=, <=, 
+    //    ==(Equality Operator),
+    //    !=Inequality Operator),
+    //    ===(Identical operator), ***Checks equality along with type
+    //    !==(Non-Identical Operator)
+
+    //    console.log(a>b) //true
+    //    console.log(a<b) //false
+    //    console.log(a>=b) //true
+    //    console.log(a<=b) //false
+    //    console.log(a==b) // false
+    //    console.log(a!=b) // true
+    //    console.log(a===b) // false
+    //    console.log(a!==b) // true
+
+       /* Truthy and falsy Values (Very-Important)
+          Truthy: true, Non-zero number, Non-empty string
+          Falsy: false, 0, Empty String, null, undefined,NaN
+       */
+
+    //    if(-1){
+    //        console.log('True value')
+    //     }
+    //     else{
+    //        console.log('false value')
+    //    }
+
+    //    if('Tarun'){
+    //        console.log('True value')
+    //     }
+    //     else{
+    //        console.log('false value')
+    //    }
+
+    //    if(''){
+    //        console.log('True value')
+    //     }
+    //     else{
+    //        console.log('false value')
+    //    }
+
+    //    if(null){
+    //        console.log('True value')
+    //     }
+    //     else{
+    //        console.log('false value')
+    //    }
+
+    //    if(undefined){
+    //        console.log('True value')
+    //     }
+    //     else{
+    //        console.log('false value')
+    //    }
+
+    //    if(x){           // throws error as x was never defined
+    //        console.log('True value')
+    //     }
+    //     else{
+    //        console.log('false value')
+    //    }
+
+    //    if(0 == '0'){     //Implicitly JS convert '0' to number and compare them. Js is very forgiving.      
+    //        console.log('True value')
+    //     }
+    //     else{
+    //        console.log('false value')
+    //    }
+    //    if(0 == '1'){     //returns false     
+    //        console.log('True value')
+    //     }
+    //     else{
+    //        console.log('false value')
+    //    }
+
+    // if(6 >= '6'){     // returns true
+    //     console.log('True value')
+    //  }
+    //  else{
+    //     console.log('false value')
+    // }
+
+    //    if('0'){     // returns true as it is a string
+    //        console.log('True value')
+    //     }
+    //     else{
+    //        console.log('false value')
+    //    }
+
+    //    if(0 === '0'){     // returns false as types are not equal. === is more strict than ==
+    //        console.log('True value')
+    //     }
+    //     else{
+    //        console.log('false value')
+    //    }
+
+    //    if(0 !== '0'){     // returns false as types are not equal. === is more strict than ==
+    //        console.log('True value')
+    //     }
+    //     else{
+    //        console.log('false value')
+    //    }
+
+    //    if(NaN){    // returns false
+    //        console.log('True value')
+    //     }
+    //     else{
+    //        console.log('false value')
+    //    }
+    
+    /*3. Logical Operator (&&, ||, !)*/
+    // Logical AND (&&)- Both conditions should be true for overrall to be true
+    // Logical OR  (||)- If atleast one condition is true then overall condition will be true
+    // Logical NOT (!)- Negation Operator
+
+    //4. Assisgnment Operators(=, +=, -=, *=, /=)
+        // a **=2 //100
+
+    //5. Bitwise Operators(&, |, <<, >>, ~(NOT), ^(XOR))
+
+    // console.log(a & b) //AND
+    /*
+      10:     1010
+       5:     0101
+      10 & 5: 0000=0
+    */
+
+    // console.log(a | b)  //OR
+    /*
+    10:     1010
+    5:      0101
+    10 & 5: 1111=15
+    */
+
+    // console.log(~a)    //NOT
+    /*
+     10 = 1010
+    ~10 = 0101 = 1010 + 1 = 1011 = -11
+    */
+    
+    /* 2s Complement: 
+       1. 1s Complement: Similar to NOT operation
+       2. Add 1 ti the Least significant bit
+     */
+
+     //XOR(^)
+     /*
+      0 ^ 0 = 0
+      1 ^ 0 = 1
+      0 ^ 1 = 1
+      1 ^ 1 = 0
+     */
+    // console.log(a^b) 
+    /*
+     10:   1010
+      5:   0101
+     10^5: 1111 = 15 
+    */
+   // console.log(a>>2) //Right Shift
+   /*
+     10:       1010
+     10 >> 2 : 0010
+   */
+   // console.log(a<<2)  //Left Shift
+   /*
+     10:       1010
+     10 << 2 : 101000 = 40
+   */
+    </script>
+</body>
+</html>

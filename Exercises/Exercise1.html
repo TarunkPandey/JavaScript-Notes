@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1</title>
+    <script>
+        var a = 'Tarun'
+        /*
+          1. Function Defination
+          2. Function Call (Invoke)
+          */
+        // function display(){
+        //     alert(a)
+        // }
+        function calculate(){
+            var x = Number(prompt('Enter the Amount'))
+            if(!x){
+                alert('Please enter a valid amount')
+            }
+            else{
+             var discount
+            if(x > 3500){
+                discount = 0.1
+            }
+            else if(x > 2500){
+                discount = 0.05
+            }
+            else{
+                discount = 0
+            }
+            var bill = x - (x*discount)
+            alert('Your bill amount is ' + Number(bill))
+            }
+
+            /* + operator:
+               -Addition when both the values are numbers
+               -Concatenation Operator when atleast one value is string
+            */
+
+        //    var y = 5
+        //    var y = 5
+        //    console.log(x + y)
+
+            // var x = '5'
+            // var y = 5
+            // console.log(x + y)
+
+            // var x = '5'
+            // var y = '5'
+            // console.log(x + y)
+
+            // var x = 5
+            // var y = '5'
+            // console.log(x + y)
+
+            // console.log('5' + (5+5))
+        }
+    </script>
+</head>
+<body>
+    <!-- This invokes display() on clicking button -->
+    <!-- <button onclick="display()">Display</button>  -->
+    <!-- <button onclick="calculate()">Calculate</button>  -->
+</body>
+</html>
+
+
+<!--
+    Events: Any action that you perform on the browser.
+
+    Event Handlers: attributes
+    1. onclick(used with Button or anchor attributes as they can be clicked). Searches for the script.
+
+  -->

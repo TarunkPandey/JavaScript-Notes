@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 6</title>
+</head>
+<body>
+    <script>
+        // Q. Calculate factorial of x and check if it is prime or not
+        let x = prompt("Enter a positive number")
+        if(x<0){
+            alert("Enter a valid number")
+        }
+        let fact = 1
+        let flag = true
+        for(let i = x; i>0; i--){
+            fact*=i
+        }
+        alert("Factorial of the number is "+ fact)
+        if(x<=1){
+            alert("Number is not prime")
+        }
+        else{
+            for(let i = 2; i< x; i++){
+                if(x % i ==0){
+                    alert("Number is not prime")
+                    flag = false
+                    break
+                }
+            }
+            if(flag){
+                alert("Number is prime")
+            }
+        }
+    </script>
+</body>
+</html>

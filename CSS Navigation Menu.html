@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Menu</title>
+    <style>
+        /* Designing navbar */
+        .navbar{
+            background-color: black;
+            border-radius: 8px;
+        }
+        /*To stop the overflow of li from its parent i.e ul due to float.The overflow property controls what happens to content that is too big to fit into an area.*/
+        .navbar ul{ 
+            overflow: auto;
+        }
+        /* In this step, we will make all the nav elements come in single horizontal line */
+        .navbar li{
+            float: left;
+            list-style: none; /*to remove the dot in front of li*/
+            font-size: 20px;
+            margin: 15px 20px;
+        }
+        .navbar li a{
+            padding: 4px 4px;
+            text-decoration: none;
+            color: white;
+        }
+        .navbar li a:hover{
+            color: blue;
+        }
+       #search{
+            float: right;
+            color: white;
+            font-size: 20px;
+            padding: 3px 50px;
+            margin-top: 8px;
+            margin-right: 5px;
+       }
+       .navbar input{
+           border: 3px solid black;
+           border-radius: 14px;
+           padding: 3px 25px;
+       }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li> <a target="_blank" href="#">Home</a></li>
+                <li> <a target="_blank" href="#">About</a></li>
+                <li> <a target="_blank" href="#">Services</a></li>
+                <li> <a target="_blank" href="#">Contact us</a></li>
+                <div class="search">
+                    <input type="text" name="search" id="search" placeholder="Search this site">
+                </div>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

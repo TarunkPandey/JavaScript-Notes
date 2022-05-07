@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position absolute, relative, fixed and sticky</title>
+    <style>
+        .container{
+            border: 4px solid black;
+            background-color: rgb(165, 119, 209);
+            height: 5000px;
+        }
+        /* CSS Positions: static(default). absolute, relative, fixed, sticky*/
+        .box{
+            display: inline-block;
+            border: 3px solid red;
+            width: 150px;
+            height: 150px;
+            margin: 3px;
+        }
+        #box3{
+        /* relative: means position of element relative to its default position and there will be a gap at its default position 
+        i.e.,Other content will not be adjusted to fit into any gap left by the element.*/
+         /* position: relative;
+         top: 34px;
+         left: 34px; */
+
+        /* absolute: means position of element relative to its first parents(here div .conatainer) position and
+           there will not be a gap at its default position*/
+         /* position: absolute;
+         top: 34px;
+         left: 34px; */
+        
+        /* fixed: position of the element relative to the browser window remains fixed when we scroll. 
+           Previous position of the element either gets occupied or removed*/
+         /* position: fixed;
+         right: 40px;
+         bottom: 40px; */
+        
+        /* sticky: position of the element relative to the browser window remains fixed even when we scroll and 
+           previous position of the element neither gets occupied nor removed*/
+         position: sticky;
+         top: 200px;
+        } 
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">1</div>
+        <div class="box" id="box2">2</div>
+        <div class="box" id="box3">Chat with us</div>
+        <div class="box" id="box4">4</div>
+    </div>    
+</body>
+</html>

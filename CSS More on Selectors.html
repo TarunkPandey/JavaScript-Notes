@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS Selectors</title>
+    <style>
+        /*Applied to all p under div*/
+        /* div p{ 
+            color: blueviolet;
+            font-weight: bold;
+            background-color: yellow;
+        } */
+        /*Applied to all p inside li and li contained inside div*/
+        /* div li p{
+            color: red;
+            background-color: blue;
+        } */
+        /*Applies to all p which are direct child of div*/
+        /* div >p{  
+            color: blueviolet;
+            font-weight: bold;
+            background-color: yellow;
+        } */
+        /*Applies to all p whose previous sibling(having same parent) is div or p is the next sibling of div */
+        div + p{  
+            color: white;
+            font-weight: bold;
+            background-color: black;
+        }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <p>This is a paragraph</p>
+            <ul>
+                <li><p>This is an another paragraph inside li</p></li>
+                <li>This is one paragraph under li</li>
+            </ul>
+        </div>
+        <p>This is an another paragraph</p>
+    </div>
+    <p>This is outermost paragraph</p>
+</body>
+</html>

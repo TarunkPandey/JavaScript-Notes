@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <script>
+    // Finctions: Block of code to perform a specific task
+    // calculate() // Function call before function declaration also works due to hoisting
+    // function calculate(){
+    //     console.log(2 + 15)
+    // }
+
+    // function Calculatesum(a,b){ //a,b becomes parameter to this function
+    // console.log(a + b)
+    // }
+    // Calculatesum(1,2) //arguements
+    // Calculatesum(784894,-5846292) 
+
+    //Sending an operator as arguement. Helps making function more dynamic.
+    // function calculate(a, b, operator){
+    //     console.log(eval(a + operator + b))
+    // }      
+    // calculate(1, 2, '+')
+    // calculate(5, 2, '/')
+    // calculate(5, 2, '%')
+
+    // Return keyword in function
+    // function calculateSum(a, b){
+    //     return a + b
+    // }
+    // console.log(calculateSum(4 , 9))
+
+    // Exercise: Take a one word text as function parameter and return its first char Capitalised
+
+    function capitalChar(string){
+        return string[0].toUpperCase() + string.slice(1)
+    }
+    input = prompt("Enter a string whose 1st char needs to be capitalise")
+    console.log(capitalChar(input))
+    </script>  
+</body>
+</html>

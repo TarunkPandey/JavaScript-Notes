@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+</head>
+<body>
+    <script>
+        let x = "JavaScript"
+        let y = "JavaScript + HTML + CSS + Bootstarp"
+        // console.log(x == y) // o/p: true as both are pointing to same string
+         
+        let z1 = new String('JavaScript') //creating string using String object constructor
+        let z2 = new String('JavaScript') // this method of creating string is not recommended
+        // console.log(z1) // o/p: String {'JavaScript'} i.e., we get an object
+        // console.log(typeof(z1)) // o/p: object
+        // console.log(z1 == z2) // o/p: false  as both z1 and z2 are objects and 2 objects can't be equal
+
+        // console.log(typeof(x)) // o/p: string
+        // console.log(typeof(z)) //o/p: string
+
+        // console.log(z1.valueOf()) // .valueOf() converts string object to primitive type
+        // console.log(z1 == x) // o/p: true
+
+        //*** console.log(y[3]) //o/p: 'a', returns character at index 3
+
+        //Property of String
+        // console.log(x.length)
+        // console.log(z1.length)
+
+        // Methods of String(These methods are case-sensitive)
+        //1. toUpperCase()
+        // console.log(y.toUpperCase())
+        // console.log(z1.toUpperCase())
+        
+        //2. toLowerCase() 
+        // console.log(y.toLowerCase())
+        // console.log(z1.toLowerCase())
+
+        // 3. indexOf()- Get's 'first' matched index of character/substring from that string else returns '-1'
+        // console.log(x.indexOf('a')) //Searching for 'a' starts from index 1.
+        
+
+        // If we want our search for index to start after particular index, then we this variation of indexOf() method
+        // console.log(y.indexOf('S', 6)) // search will start from index 6, here 6 is inclusive 
+
+        // 4. lastIndexOf()- Get's 'last' matched index of character/substring  from that string else returns '-1'
+        // console.log(x.lastIndexOf('a'))
+
+        // 5. includes() - returns true if substring is present, else returns false
+        //  console.log(y.includes('HTML')) //o/p: true
+        //  console.log(y.includes('vaS')) //o/p: true
+        //  console.log(y.includes('L + C')) //o/p: true
+
+        // 6. startsWith() - Checks whether a string starts with a particular substring
+        // console.log(y.startsWith('JavaScr'))
+        // console.log(y.startsWith('JavaScript'))
+        
+        // 7. endsWith() - Checks whether a string ends with a particular substring
+        // console.log(y.endsWith('CSS'))
+        // console.log(y.endsWith('JavaScript'))
+
+        // 8. Access a character at a particular index in a string           
+        // console.log(y[14])
+        // console.log(y.charAt(14)) 
+
+        // 9. charCodeAt() - To access ASCII code of a character at a particular index
+        // console.log(y.charCodeAt(4)) 
+
+        // 10. replace() -It replaces a substring with a particular substring. First parameter is to match substring and second parameter is replace value
+        // Note: It will only replace the first occurance. It will not cause change in original string.
+        // console.log(y.replace('CSS', 'Python'))
+        // console.log(y.replace('S', '$'))
+        // console.log(y.replace('S', '')) // removes first occurance of 'S' from string
+
+        //11. replaceAll() - replces all the occurances
+        // console.log(y.replaceAll('S','$'))
+        // console.log(y.replaceAll('S','')) 
+
+        //12. match() - It takes regular expression as input
+        // console.log(y.match(/HTML/)) // Only return index of 1st occurance from left
+        // console.log(y.match(/S/gi))
+        
+        //13. search() - operates same as match(). It only return the count of matched occurances. It takes regular expression as input
+        // console.log(y.search(/S/gi)) // o/p: 4
+
+        //14. concat() - No change in original string
+        // let z = " + Python"
+        // console.log(y.concat(z)) //o/p: "JavaScript + HTML + CSS + Bootstarp + Python"
+        //or
+        // console.log(y + z) // concat using '+' operator
+
+        //15. slice() - used to extract a part from a string
+        // console.log(y.slice(0,5))// Here 5 is not inclusive. It is like substring() of Java
+        // console.log(y.slice(7,-1))// Here -1 refers to the (string - last character). Here string will start from 7th index 
+        // console.log(y.slice(7,-3))// Here -3 refers to the (string -  last character 3 characters) Here string will start from 7th index
+        // Two more methods silimar to slice() are substr() & splice()
+        
+
+    </script>
+</body>
+</html>
+<!-- 
+    When we create strings directly i.e., let x = "JavaScript" it creates string of primitive data type but -
+    - when we create string using String object constructor i.e., let z1 = new String('JavaScript') then we get an object.
+
+    Also study: Regular Expression
+    g: global (looks for all the values)
+    i: insensitive(Doesn't take consideration for uppercase and lowercase)
+ -->

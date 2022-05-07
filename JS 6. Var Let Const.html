@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAr Let Const</title>
+</head>
+<body>
+    <script>
+        // var x //Declaration
+        // var x = 5 // Intialisation
+
+        /*
+        (These pointers apply for same scope)
+        1. var
+        - Re-declaration is allowed
+        - Re-intialization is allowed
+        - Re-assisgnment is allowed
+        - Global Scope
+        - variable declared without any keyword is var by default
+
+        2. let
+        - Re-declaration is not allowed
+        - Re-intialization is not allowed
+        - Re-assisgnment is allowed
+        - Block Scope *** (scope with {})
+
+        3. const
+        - Re-declaration is not allowed
+        - Re-intialization is not allowed
+        - Re-assisgnment is not allowed
+        - Block Scope ***
+
+        */
+
+        // {
+        //     var x = 5 // Shows the global scope of var
+        // }
+        // console.log(x)
+
+        // var x = 5 // Shows Reintialization of var
+        // var x = 10
+
+        // {
+        //     let x = 5 //Scope of let x only inside {}. It has block scope
+        // }
+        // console.log(x)
+
+        // let x = 5
+        // {
+        //     console.log(x) // x = 5 can be accesed from here in console. It is called inner scope. It also works for var and const also.
+        // }
+
+        // {
+        //     let x = 5 //Block scope
+        // }
+        // let x = 5  // Re-intialization is allowed as it in different scope than above let
+        // console.log(x)
+
+        // {
+        //     const x = 5 //Re-assisgnment is not allowed
+        //     x = 6 
+        // }
+
+            // {
+            //     var x = 5
+            //     x = 10
+            // }
+            // console.log(x)
+
+            // {
+            //     let x = 5
+            //     x = 10
+            // }
+            // console.log(x)
+
+            // {
+            //     const x = 5
+            //     x = 10
+            // }
+            // console.log(x)
+
+            /*
+             - Outer scope  can be accesed 
+            */
+    </script>    
+</body>
+</html>

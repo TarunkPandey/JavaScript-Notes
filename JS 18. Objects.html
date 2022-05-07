@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <h1 id="display-object"></h1>
     <script>
         // Object: It is a data type which is the collection of elements in key-value pair form.
         // Use {}, key value pair is separated by ':', separate key-value pairs are separated by commas.
@@ -18,6 +19,8 @@
         - It makes storing group of data much easier.
         - JSON: JavaScript Object Notation.
         - Properties: Keys in Objects which are used only to access values is known as properties.
+        - Methods: Keys in Objects which are used only for executing purpose is known as methods.
+        - [object Object]: We get this warning when we try to display object in DOM. DOM usually uderstands primitive values such as string, integer etc.
         */
         // let obj = {
         //     name : 'Shashank',
@@ -34,7 +37,7 @@
             likesIceCream: false
         }
 
-        //Accessing values of objects using keys.
+        //1. Accessing values of objects using keys.
         console.log(aditi.fullName)
         console.log(aditi['fullName'])
 
@@ -49,13 +52,43 @@
         //     color: 'black'
         // }
 
-        let tarun = {
-            firstName: 'Tarun',
-            lastName: 'Kumar',
-            age: 20,
-            likeReading: true,
-        }
-        console.log(tarun.firstName +' '+ tarun.lastName + " is of the age "+ tarun.age + " years and he/she "+ (tarun.likeReading ? "likes" : "doesn't like")+ " reading")
+        // let tarun = {
+        //     firstName: 'Tarun',
+        //     lastName: 'Kumar',
+        //     age: 20,
+        //     likeReading: true,
+        // }
+        // console.log(tarun.firstName +' '+ tarun.lastName + " is of the age "+ tarun.age + " years and he/she "+ (tarun.likeReading ? "likes" : "doesn't like")+ " reading")
+
+        //2. Manipulating Object's value using keys.
+        // tarun.age = 30
+        // console.log(tarun)
+
+        // tarun['age'] =  41 //Use of square brackets becomes necessary for the key with space between them. e.g.: first name : 'Tarun Kumar'
+        // console.log(tarun)
+
+        // Methods
+
+        //1. JSON.parse(): Converts an object written in the form of a string to an object. 
+        // let car = '{"passengers": 5, "wheels": 4, "brand": "Maruti Suzuki", "color": "black" }' // This is a JavaScript object written in the form of a string 
+        // let obj = JSON.parse(car)
+        // console.log(obj)
+
+        // 2. JSON.stringify(): It converts object into string which browser can understand as browser understands primitive values.
+        // let car = {
+        //     passengers: 5,
+        //     wheels: 4,
+        // }
+        // document.getElementById('display-object').innerHTML = car //[object Object]: We get this warning when we try to display object in DOM. DOM usually uderstands primitive values such as string, integer etc.
+        // To overcome [object Object] warning, we can convert first convert it into string.
+        // document.getElementById('display-object').innerHTML = JSON.stringify(car) //{"passengers": 5, "wheels": 4}
+
+        // console.log(car) //{passengers: 5, wheels: 4}
+        // console.log(typeof(car)) //object       
+        // console.log(JSON.stringify(car)) // {"passengers":5,"wheels":4}
+        // console.log(typeof(JSON.stringify(car))) //string
+
+        /* If a string(with key-value pairs, curly braces etc.) that can be converted into an object, is converted in to an object using JSON.parse()*/
     </script>
 </body>
 

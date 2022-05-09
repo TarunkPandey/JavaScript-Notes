@@ -1,40 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Objects</title>
-  </head>
 
-  <body>
-    <script>
-        // 1. Adding new keys to an existing object
-        // let x = {
-        //     a: 1,
-        //     b: 2
-        // }
-        // console.log(x)
-        // Adding a new key c with the value 15 to the object
-        // x.c = 15
-        // Adding a new key d with the value 16 to the object
-        // x['d'] = 16
-        // console.log(x)
-        // If we try to assign a value to a key that doesn't exist then JS will create that key first and then assign the value as shown above.
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Objects</title>
+</head>
 
-        // 2. Accessing key which doesn't exit to an object
-        // console.log(x.e) //undefined
+<body>
+  <script>
+    // 1. Adding new keys to an existing object
+    // let x = {
+    //     a: 1,
+    //     b: 2
+    // }
+    // console.log(x)
+    // Adding a new key c with the value 15 to the object
+    // x.c = 15
+    // Adding a new key d with the value 16 to the object
+    // x['d'] = 16
+    // console.log(x)
+    // If we try to assign a value to a key that doesn't exist then JS will create that key first and then assign the value as shown above.
 
-        // 3. Arrays as values inside objects
-        // let bank = {
-        //     branch: 'Mumbai',
-        //     ifscCode: 123456,
-        //     name: 'India Bank',
-        //     isOperational: true,
-        //     accountsAvailable: ['Savings', 'Current', 'PPF']
-        // }
+    // 2. Accessing key which doesn't exit to an object
+    // console.log(x.e) //undefined
 
-        
-    </script>
-  </body>
+    // 3. Arrays as values inside objects
+    // let bank = {
+    //   branch: 'Mumbai',
+    //   ifscCode: 123456,
+    //   name: 'India Bank',
+    //   isOperational: true,
+    //   accountsAvailable: ['Savings', 'Current', 'PPF']
+    // }
+    // A ccess 2nd account of bank
+    // console.log(bank.accountsAvailable[1])
+
+    // 4. Nested Object (objects inside objects): Object as a value inside another object. Below marksSecured is a nested object. Its better than using arrays for storing large amount of data.
+    // let sunil = {
+    //   firstName: 'Sunil',
+    //   lastName: 'Yadav',
+    //   batch: 10,
+    //   likesDancing: true,
+    //   marksSecured: {
+    //     science: 82,
+    //     maths: 98,
+    //     socialScience: 73,
+    //     english: 87,
+    //     hindi: 77
+    //   }
+    // }
+    // Access english marks of sunil
+    // console.log(sunil.marksSecured.english)
+
+    // 5. Objects inside Arrays
+    // let sunil = {
+    //   firstName: 'Sunil',
+    //   lastName: 'Yadav',
+    //   batch: 10,
+    //   likesDancing: true,
+    // }
+    // let hardeep = {
+    //   firstName: 'Hardeep',
+    //   lastName: 'Jat',
+    //   batch: 9,
+    //   likesDancing: false,
+    // }
+    // let rishab = {
+    //   firstName: 'Rishab',
+    //   lastName: 'Maurya',
+    //   batch: 8,
+    //   likesDancing: true,
+    // }
+
+    // Below students is an array containing objects
+    // let students = [{
+    //   firstName: 'Sunil',
+    //   lastName: 'Yadav',
+    //   batch: 10,
+    //   likesDancing: true,
+    // }, {
+    //   firstName: 'Hardeep',
+    //   lastName: 'Jat',
+    //   batch: 9,
+    //   likesDancing: false,
+    // }, {
+    //   firstName: 'Rishab',
+    //   lastName: 'Maurya',
+    //   batch: 8,
+    //   likesDancing: true,
+    // }]
+    // console.log(students)
+
+    // // Accessing the batch number of 2nd student in the array
+    // console.log(students[1].batch)
+    // console.log(students[1] ['batch'])
+
+    /*
+    Execise:
+    Create an object for a student:
+    - Name of the student
+    - Whether the student is graduated or not
+    - Hobbies of the student
+    - Compaines that student has appied in.
+    */
+    // let tarun = {
+    //   name: {
+    //     firstName: 'Tarun',
+    //     middleName: null,
+    //     lastName: 'Kumar'
+    //   },
+    //   isGraduated: true,
+    //   hobbies: ['Reading', 'Playing Cricket', 'Singing'],
+    //   CompainesApplied: ['google', 'facebook', 'HSBC', 'Amazon']
+    // }
+
+  </script>
+</body>
+
 </html>

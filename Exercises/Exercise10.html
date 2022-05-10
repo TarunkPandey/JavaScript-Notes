@@ -18,12 +18,12 @@
 
             Expected Output:
             let studentsWithCalculatedMarks = [
-                {
+            {
                 name: 'Vaishnavi',
                 batch: 8,
                 average marks: 84
             },
-             {
+            {
                 name: 'Abhishek',
                 batch: 10,
                 average marks: 69.6
@@ -89,8 +89,31 @@
             }
         ]
 
-        // Answer:
-        
+        // Answers:
+        // 1. Brute force solution
+        // let studentsWithCalculatedMarks = []
+        // for(let i=0; i<students.length; i++){
+        //     let student = students[i]
+        //     let obj = {} // creating new object
+        //     obj.name = student.name
+        //     obj.batch = student.batch
+        //     obj.avgMarks = Object.values(student.marks).reduce((accumulator, element) => accumulator + element) //Calculating avg marks. Object.values returns an array of marks.
+        //     obj.avgMarks /= 5
+        //     studentsWithCalculatedMarks.push(obj) // push local objects into array studentsWithCalculatedMarks
+        // }
+        // console.log(studentsWithCalculatedMarks)
+
+        // 2nd solution
+        // let studentsWithCalculatedMarks = students.map(function(e){
+        //     let obj = {}
+        //     obj.Name = e.name
+        //     obj.Batch = e.batch
+        //     obj.avgMarks = Object.values(e.marks).reduce((accumulator, element) => accumulator + element)
+        //     obj.avgMarks /= 5
+
+        //     return obj
+        // })
+        // console.log(studentsWithCalculatedMarks)
     </script>
 </body>
 

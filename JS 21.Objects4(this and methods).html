@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Methods</title>
+</head>
+<body>
+    <script>
+        // let obj = {
+        //     name: 'Ram',
+        //     batch: 10,
+        //     likesReadingBooks: true,
+        //     sayHi: function() { // Here a function (method) is used as value to object key. Anonymous Function is used here.
+        //         console.log('Hi')
+        //     }
+        // }
+        // obj.sayHi() //SayHi() in 'obj' object invoked
+
+        // Arrow function(also an anonymous function) can also be used as below:
+        // let obj = {
+        //     name: 'Ram',
+        //     batch: 10,
+        //     likesReadingBooks: true,
+        //     sayHi: () => { 
+        //         return 'Hi'
+        //     }
+        // }
+        // console.log(obj.sayHi()) //SayHi() in 'obj' object invoked
+
+        // Passing parameter to the function inside the object
+        // let obj = {
+        //     name: 'Ram',
+        //     batch: 10,
+        //     likesReadingBooks: true,
+        //     sayHi: (name) => {  //Parameter is used here to make function dynamic
+        //         console.log('Hi ' + name)
+        //     }
+        // }
+        // obj.sayHi('Tarun') // Arguement is passed here.
+        // obj.sayHi('Rishab') 
+
+        // Note: Always try to avoid using the name of object to access properties inside an object. To avoid this problem, 'this' keyword is used.
+
+        // 'this' keyword: It refers to the owner of the method. Don't use arrow function with 'this keyword'.
+        // let obj = {
+        //     name: 'Ram',
+        //     batch: 10,
+        //     likesReadingBooks: false,
+        //     sayBatchNo:  function () {  
+        //         console.log("I'm from batch " + this.batch)
+        //     },
+        //     sayIntro: function () {
+        //         console.log("My name is " + this.name + ". I'am from batch no. " + this.batch + " and I " + (obj.likesReadingBooks ? "like reading books." : "don't like reading books."))
+        //     }
+        // }        
+        // obj.sayBatchNo()
+        // obj.sayIntro()
+
+
+        /*
+        ***this keyword in global scope refers to window object. Any property of window object can be accessed directly.
+        e.g: Alert is a window property which can be used without window. 
+        console.log(alert("hi"))
+        console.log(this.alert("hi")) //same output as above
+        */
+        // console.log(this) // shows that this keyword in global scope refers to window object. Window simply refers to BOM(browser object model). Window object is the part of BOM and it refers to everything related to browser.
+  
+    </script>
+    <!-- 
+        Difference between Arrow function and Anonymous Function
+        - Arrow function are not hoisted.
+        - You don't have access to 'this' keyword inside arrow function.
+     -->
+</body>
+</html>

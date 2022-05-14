@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Construtors</title>
+</head>
+<body>
+    <script>
+        /*
+        Object Constructors: Template / Blueprint for objects. It is used to create objects with a predefined template.
+        There are object constructor for every data type in JavaScript.
+        */
+
+        // function Student (name, batch, place,sayHi){ //Pascal case: Make first letter capital for the constructors name.
+        //     this.name = name
+        //     this.batch = batch
+        //     this.place = place
+        //     this.sayHi = sayHi // function assignment within a constructor.
+        // }
+        // let sayHi = function(){
+        //     console.log('Hi')
+        // }
+
+        // Creating Objects: All this object will be of the type 'Student'(name of the constructor)
+        // let pappu = new Student('Pappu', 11, 'Kolkata',sayHi)
+        // let swapnil = new Student('Sawpnil', 7, 'Mumbai',sayHi)
+        // let sumit = new Student('Sumit', 9, 'Delhi',sayHi)
+        
+        // pappu.sayHi()
+        // console.log(pappu)
+        // console.log(swapnil)
+        // console.log(sumit)
+
+        //  Inbuilt Constructors
+        // 1. String()
+        // let str = new String('JavaScript')
+        // console.log(str)
+
+        //To convert a string(which is constructed from object contructor) into primitive value, use '.valueOf()'. e.g:
+        // console.log(str.valueOf())
+
+        // 2. Number()
+        // let num = new Number(9)
+        // console.log(num)
+
+        //To convert a number(which is constructed from object contructor) into primitive value, use '.valueOf()'. e.g:
+        // console.log(num.valueOf())
+        
+        // 3. Boolean()
+        // let flag = new Boolean(9)
+        // console.log(flag)
+        // let flag1 = new Boolean('')
+        // console.log(flag1)
+
+        // 4. Date()
+        // let date = new Date()
+        // console.log(date)
+        // let date1 = new Date(2021, 3, 29, 22, 0, 0, 0)// new Date(year, month, day, hours, minutes, seconds, milliseconds). months range (0 -12)
+        // console.log(date1)
+
+        // Math Functions
+        
+        // 5. Trunc(): Returns only integer part.
+        // let x = -550.12345684
+        // console.log(Math.trunc(x))
+
+        // 6. floor(): Returns nearest integer which is lesser than the value.
+        // let x = -550.12345684
+        // console.log(Math.floor(x))
+        
+        // 7. ceil(): Returns nearest integer which is greater than the value.
+        // let x = -550.12345684
+        // console.log(Math.ceil(x))
+
+        // 8. sqrt(): Return square root of the number 
+        // let x = 625
+        // console.log(Math.sqrt(x))
+        // Note: More Object Constructors: https://www.w3schools.com/js/js_object_constructors.asp
+
+        
+
+    </script> 
+</body>
+</html>

@@ -103,15 +103,14 @@
         // }
         // console.log(studentsWithCalculatedMarks)
 
-        // 2nd solution
+        // 2. Optimal Solution
         // let studentsWithCalculatedMarks = students.map(function(e){
-        //     let obj = {}
-        //     obj.Name = e.name
-        //     obj.Batch = e.batch
-        //     obj.avgMarks = Object.values(e.marks).reduce((accumulator, element) => accumulator + element)
-        //     obj.avgMarks /= 5
-
-        //     return obj
+        //     let totalMarks = Object.values(e.marks).reduce((accumulator, element) => accumulator + element) 
+        //     return{
+        //     name:  e.name,
+        //     batch: e.batch,
+        //     avgMarks:  totalMarks/Object.values(e.marks).length   
+        //     }
         // })
         // console.log(studentsWithCalculatedMarks)
     </script>

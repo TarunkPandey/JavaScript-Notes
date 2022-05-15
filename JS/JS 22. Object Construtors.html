@@ -37,6 +37,8 @@
         // 1. String()
         // let str = new String('JavaScript')
         // console.log(str)
+        // Note: Anything created with object constructor is an object.
+        // console.log(typeof(str)) // output: object  
 
         //To convert a string(which is constructed from object contructor) into primitive value, use '.valueOf()'. e.g:
         // console.log(str.valueOf())
@@ -44,6 +46,7 @@
         // 2. Number()
         // let num = new Number(9)
         // console.log(num)
+        // console.log(typeof(num)) // output: object
 
         //To convert a number(which is constructed from object contructor) into primitive value, use '.valueOf()'. e.g:
         // console.log(num.valueOf())
@@ -77,9 +80,28 @@
         // 8. sqrt(): Return square root of the number 
         // let x = 625
         // console.log(Math.sqrt(x))
-        // Note: More Object Constructors: https://www.w3schools.com/js/js_object_constructors.asp
-
         
+        // 9. PI
+        // console.log(Math.PI)
+
+        //10. exp(): It gives exponential value.
+        // console.log(Math.exp(2))
+
+        //11. pow()
+        // console.log(Math.pow(5,2))
+        // console.log(5 ** 2) // ** gives same result as 'pow'
+
+        //12. min(): will return the minimum value out of the values provided
+        // console.log(Math.min(255, 32, 432, 321))
+        
+        //12. max(): will return the maximum value out of the values provided
+        // console.log(Math.max(255, 32, 432, 321))
+
+
+        /* 
+        Note: 1. More Object Constructors: https://www.w3schools.com/js/js_object_constructors.asp 
+              2. console.log(0.1 + 0.2 === 0.3) will give output false as JS will first convert these numbers into binary and then decimal which will result in error. 
+        */
 
     </script> 
 </body>
